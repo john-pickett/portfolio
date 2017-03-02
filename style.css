@@ -1,3 +1,7 @@
+body {
+  font-family: 'Lato', sans-serif;
+}
+
 .navbar {
   margin-bottom: 0;
   background-color: #00688B;
@@ -24,7 +28,35 @@
 }
 
 .jumbotron {
-  background-color: #00688B; /* Orange */
-  color: #ffffff;
+  background-color: #00688B; /* Dark Sky Blue */
+  color: #00688B;
   padding: 100px 25px;
+  background-image: url('desk.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  height: 800px;
+  padding-top: 200px;
+}
+
+.top-divider {
+    width: 400px;
+    border-top: 3px solid #f8f8f8;
+    border-bottom: 1px solid rgba(0,0,0,0.2);
+}
+
+.content {
+  margin-top: -30px;
+  padding: 25px;
+  border-top: 10px solid #00688B;
+  border-left: 10px solid #00688B;
+  border-right: 10px solid #00688B;
+  border-bottom: 10px solid #00688B;
+}
+
+#portfolio {
+  background-color: lightgray;
+  margin: 0 -25px;
+  padding: 25px;
+
 }

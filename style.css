@@ -28,8 +28,8 @@ body {
 }
 
 .jumbotron {
-  background-color: #00688B; /* Dark Sky Blue */
-  color: #00688B;
+  background-color: #ffffff;
+  color: #00688B; /* Dark Sky Blue */
   padding: 100px 25px;
   background-image: url('desk.jpg');
   background-repeat: no-repeat;
@@ -54,9 +54,78 @@ body {
   border-bottom: 10px solid #00688B;
 }
 
-#portfolio {
-  background-color: lightgray;
-  margin: 0 -25px;
-  padding: 25px;
+.content p {
+  font-size: 18px;
+}
+
+.about {
+  margin-bottom: 25px;
+  min-height: 300px;
+}
+
+.about h1 {
+  text-align: center;
+}
+
+.about img {
+  width: 80%;
+  border-radius: 25%;
+  display: block;
+  margin: auto;
 
 }
+
+.portfolio {
+  background-color: lightgray;
+  margin-bottom: 25px;
+  min-height: 300px;
+}
+
+.portfolio h1 {
+  text-align: center;
+}
+
+.contact {
+  margin-bottom: 25px;
+  min-height: 300px;
+}
+
+.contact h1 {
+  text-align: center;
+}
+
+#bottom-splash {
+  background-color: #ffffff;
+  color: #00688B; /* Dark Sky Blue */
+  background-image: url('desk.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  /*background-attachment: fixed;*/
+  height: 300px;
+}
+
+#bottom-splash h1{
+  font-size: 78px;
+  text-align: center;
+  line-height: 250px;
+  height: 250px;
+  text-shadow: 1px 2px #ffffff;
+}
+
+.bottom-splash-left {
+  /*padding-top: 25px;*/
+}
+
+.bottom-splash-right {
+  padding-top: 120px;
+}
+
+footer {
+  padding-top: 40px;
+  font-size: 20px;
+  text-align: center;
+  background-color: lightgray;
+  min-height: 100px;
+}
+
+/*<div style="text-align:center;line-height:300px;height:300px;font-size:78px;">Text Content</div>*/

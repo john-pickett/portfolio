@@ -1,0 +1,65 @@
+body {
+  font-family: 'Lato', sans-serif;
+}
+
+.navbar {
+  margin-bottom: 0;
+  background-color: #00688B;
+  z-index: 9999;
+  border: 0;
+  font-size: 18px !important;
+  line-height: 1.5 !important;
+  letter-spacing: 2px;
+  border-radius: 0;
+}
+
+.navbar li a, .navbar .navbar-brand {
+  color: #fff !important;
+}
+
+.navbar-nav li a:hover, .navbar-nav li.active a {
+  color: #00688B !important;
+  background-color: #fff !important;
+}
+
+.navbar-default .navbar-toggle {
+  border-color: transparent;
+  color: #fff !important;
+}
+
+aside {
+  margin-top: 200px;
+  padding-left: 100px !important;
+  height: 800px;
+}
+
+.content {
+  margin-top: 50px;
+  padding-right: 150px !important;
+  padding-bottom: 100px !important;
+}
+
+.content p {
+  font-size: 18px;
+}
+
+.code {
+  background-color: #333333;
+  color: #FCFBE3;
+  padding: 5px;
+}
+
+.code-inline {
+  background-color: #333333;
+  color: #FCFBE3;
+  padding-left: 2px;
+  padding-right: 2px;
+}
+
+footer {
+  padding-top: 40px;
+  font-size: 20px;
+  text-align: center;
+  background-color: lightgray;
+  min-height: 100px;
+}

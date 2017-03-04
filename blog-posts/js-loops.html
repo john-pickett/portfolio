@@ -8,8 +8,9 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet">
     <!-- Custom Fonts and CSS -->
-    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="../font-awesome/css/font-awesome.min.css" rel="stylesheet">
     <link href="blog-style.css" rel="stylesheet">
   </head>
 
@@ -36,7 +37,20 @@
     </nav>
     <div class="row">
       <aside class="col-md-4">
+        <img src="../john.jpg" id="john-pic">
         <h2>John Pickett</h2>
+        <h3>Full Stack Web Developer</h3>
+        <ul class="list-inline intro-social-buttons">
+          <li>
+              <a href="https://github.com/john-pickett" target="_blank" class="btn btn-default btn-lg"><i class="fa fa-github fa-fw"></i> <span class="network-name">Github</span></a>
+          </li>
+          <li>
+              <a href="https://www.linkedin.com/in/johnpickett1/" target="_blank" class="btn btn-default btn-lg"><i class="fa fa-linkedin fa-fw"></i> <span class="network-name">Linkedin</span></a>
+          </li>
+          <li>
+              <a href="https://twitter.com/JohnPickett" target="_blank" class="btn btn-default btn-lg"><i class="fa fa-twitter fa-fw"></i> <span class="network-name">Twitter</span></a>
+          </li>
+        </ul>
         <a href="#">Home</a>
         <a href="#">About</a>
         <a href="#">Portfolio</a>
@@ -49,7 +63,7 @@
         <p>Loops are a very efficient method in Javascript for running a command over and over on a set of data.
           But there are a few different types of loops, and when you're new to Javascript it can be difficult to
           keep them straight. In this article, we'll be taking an in-depth look at three different Javascript
-          loops: the for loop, the while loop, and the do while loop.</p>
+          loops: the <strong>for loop</strong>, the <strong>while loop</strong>, and the <strong>do while loop</strong>.</p>
 
         <h2>Data Set and Our Problem</h2>
 
@@ -185,7 +199,7 @@
 
         <p>Using <span class="code-inline">i < 26</span> ensures that our loop will run the correct number of times
           and assign every student to the <span class="code-inline">seatingChart</span>. However, that's not a very elegant solution.
-          What if we didn't know the exact number of students in the class? Another option would be this:</p>
+          What if we didn't know the exact number of students in the class? A better option would be this:</p>
 
         <p class="code">for (var i = students.length; i > 0; i--) {<br>
           &nbsp&nbsp var random = Math.floor(Math.random() * students.length);<br>
@@ -249,7 +263,7 @@
         </p>
 
         <p>This will log <span class="code-inline">i</span> to the console 10 times, but if we changed the code
-          to say <span class="code-inline">while (i > 10);</span> this making it a false statement, the code would still run one time.</p>
+          to say <span class="code-inline">while (i > 10);</span> thus making it a false statement, the code would still run one time.</p>
 
 
       </div>

@@ -31,7 +31,7 @@ body {
   background-color: #ffffff;
   color: #00688B; /* Dark Sky Blue */
   padding: 100px 25px;
-  background-image: url('desk.jpg');
+  background-image: url('images/desk.jpg');
   background-repeat: no-repeat;
   background-position: center;
   background-attachment: fixed;
@@ -97,7 +97,7 @@ body {
 #bottom-splash {
   background-color: #ffffff;
   color: #00688B; /* Dark Sky Blue */
-  background-image: url('desk.jpg');
+  background-image: url('images/desk.jpg');
   background-repeat: no-repeat;
   background-position: center;
   /*background-attachment: fixed;*/

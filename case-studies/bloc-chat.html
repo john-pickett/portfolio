@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>John Pickett | Full Stack Web Developer</title>
+    <title>Bloc Chat Case Study - John Pickett</title>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <!-- Google Font -->
@@ -11,7 +11,7 @@
     <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet">
     <!-- Custom Fonts and CSS -->
     <link href="../font-awesome/css/font-awesome.min.css" rel="stylesheet">
-    <link href="blog-style.css" rel="stylesheet">
+    <link href="case-style.css" rel="stylesheet">
   </head>
 
   <body>
@@ -58,10 +58,60 @@
       </aside>
 
       <div class="col-md-8 content">
-        <h1>Blog Post Title Here</h1>
+        <h1>Bloc Chat Case Study</h1>
 
-        <p>Awesome content goes here.</p>
-        <p class="code">Awesome code content goes here.</p>
+        <h2>Summary</h2>
+
+        <p><img src="../images/bloc-chat.png"</p>
+
+        <p>Everyone needs a way to stay in touch with friends and a chat room is a great way to do it! Plus,
+          you might meet some new friends who share your interests.</p>
+
+        <h2>Overview of the App</h2>
+
+        <p>Bloc Chat was made with AngularJS on the front end, and connected to a Firebase database on the back end.
+          The chat room names and the messages in each chat room are stored in the database, and pulled when the user
+          selects a new chat room to join.</p>
+
+        <p>The user can also choose their username, and it is stored locally in a cookie. The next time the user
+          comes to the chat rooms, their username is populated automatically. Users can also reset their username
+          if needed.</p>
+
+        <h2>Challenges</h2>
+
+        <p>One unique challenge that I ran into in this project was when I was creating the controller function
+        to allow the user to create a new username. I wanted each user to have to provide a valid username so that
+        their messages would be properly associated with their username. I ended up validating the username like so:</p>
+
+        <p class="code">
+          chatapp.newUser = function(){<br>
+          &nbspvar modalInstance = $uibModal.open({<br>
+          &nbsp&nbsptemplateUrl: '/templates/user-modal.html',<br>
+          &nbsp&nbspcontroller: function($scope, $uibModalInstance) {<br>
+          &nbsp&nbsp&nbsp$scope.create = function() {<br>
+          &nbsp&nbsp&nbsp&nbspif ($scope.newUser !== undefined && $scope.newUser != ""){<br>
+          &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp$uibModalInstance.close($scope.newUser);<br>
+          &nbsp&nbsp&nbsp&nbsp} else {<br>
+          &nbsp&nbsp&nbsp&nbsp&nbsp&nbspalert("Error: Please provide a valid username");<br>
+          &nbsp&nbsp&nbsp&nbsp}<br>
+          &nbsp&nbsp&nbsp};<br>
+          &nbsp&nbsp},<br>
+          &nbsp&nbsp&nbspsize: 'md',<br>
+          });<br>
+        </p>
+
+        <p>When the user clicks the button to reset their username, a modal pops up allowing them to input a
+          new name. If they don't enter a name into the input field, they get an alert saying "Please enter a
+          valid username", and they cannot exit the modal until they do so.</p>
+
+        <img src="../images/bloc-chat-alert.png">
+
+        <h2>Conclusion</h2>
+
+        <p>The chat app was a lot of fun to make, and Angular was a great resource to use on this project. Building
+        this as an SPA and using <span class="code-inline">ui-view</span> makes switching from room to room and
+        displaying different messages quick and easy for the user.</p>
+
       </div>
       <!-- end of content -->
     </div>

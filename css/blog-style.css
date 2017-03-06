@@ -59,6 +59,12 @@ aside a {
 .content img {
   width: 100%;
   border-radius: 5px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.content li {
+  font-size: 18px;
 }
 
 .code {

@@ -9,8 +9,8 @@
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
     <!-- Custom Fonts and CSS -->
-    <link href= {{ "/font-awesome/css/font-awesome.min.css" | absolute_url }} rel="stylesheet">
-    <link href= {{ "/css/style.css" | absolute_url }} rel="stylesheet">
+    <link href= "{{ site.github.url }}/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href= "{{ site.github.url }}/css/style.css" rel="stylesheet">
   </head>
 
   <body>
@@ -25,11 +25,11 @@
         </div>
         <div class="collapse navbar-collapse" id="myNavbar">
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="#top-nav">Home</a></li>
-            <li><a href="#about-nav">About</a></li>
-            <li><a href="#portfolio-nav">Portfolio</a></li>
-            <li><a href="#contact-nav">Contact</a></li>
-            <li><a href="#blog-nav">Blog</a></li>
+            <li><a href="{{ site.github.url }}/">Home</a></li>
+            <li><a href="{{ site.github.url }}/about">About</a></li>
+            <li><a href="{{ site.github.url }}/portfolio">Portfolio</a></li>
+            <li><a href="{{ site.github.url }}/contact">Contact</a></li>
+            <li><a href="{{ site.github.url }}/blog">Blog</a></li>
           </ul>
         </div>
       </div>

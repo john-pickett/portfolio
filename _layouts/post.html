@@ -1,0 +1,31 @@
+---
+layout: default
+---
+<aside class="col-md-4">
+  <img src={{ "/images/john.jpg" | absolute_url }} id="john-pic">
+  <h2>John Pickett</h2>
+  <h3>Full Stack Web Developer</h3>
+  <ul class="list-inline">
+    <li>
+        <a href="https://github.com/john-pickett" target="_blank" class="btn btn-default btn-lg"><i class="fa fa-github fa-fw"></i> <span class="network-name">Github</span></a>
+    </li>
+    <li>
+        <a href="https://www.linkedin.com/in/johnpickett1/" target="_blank" class="btn btn-default btn-lg"><i class="fa fa-linkedin fa-fw"></i> <span class="network-name">Linkedin</span></a>
+    </li>
+    <li>
+        <a href="https://twitter.com/JohnPickett" target="_blank" class="btn btn-default btn-lg"><i class="fa fa-twitter fa-fw"></i> <span class="network-name">Twitter</span></a>
+    </li>
+  </ul>
+  <a href="#">Home</a>
+  <a href="#">About</a>
+  <a href="#">Portfolio</a>
+  <a href="#">Blog</a>
+</aside>
+
+<div class="col-md-8 content">
+<h1> {{ page.title }} </h1>
+<p class="meta"> {{ page.date | date_to_string }}</p>
+
+{{ content }}
+
+</div>

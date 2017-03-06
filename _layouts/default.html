@@ -9,8 +9,8 @@
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
     <!-- Custom Fonts and CSS -->
-    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
+    <link href= {{ "/font-awesome/css/font-awesome.min.css" | absolute_url }} rel="stylesheet">
+    <link href= {{ "/css/style.css" | absolute_url }} rel="stylesheet">
   </head>
 
   <body>
@@ -35,10 +35,10 @@
       </div>
     </nav>
 
-    <div class="container">
-    {{ content }}
-    </div>
 
+    {{ content }}
+
+    &nbsp
     <footer>
       Copyright John Pickett |
       <a href="#">Home</a>
@@ -56,6 +56,6 @@
 
     </script>
 
-     </body>
+  </body>
 
-  </html>
+</html>

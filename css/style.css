@@ -45,7 +45,7 @@ body {
     border-bottom: 1px solid rgba(0,0,0,0.2);
 }
 
-.content {
+.main-content {
   margin-top: -30px;
   padding: 25px;
   border-top: 10px solid #00688B;
@@ -54,7 +54,7 @@ body {
   border-bottom: 10px solid #00688B;
 }
 
-.content p {
+.main-content p {
   font-size: 18px;
 }
 
@@ -120,6 +120,61 @@ body {
   padding-top: 120px;
 }
 
+aside {
+  margin-top: 200px;
+  height: 800px;
+  text-align: center;
+}
+
+aside h2,h3 {
+  color: #00688B;
+}
+
+#john-pic {
+  width: 60%;
+  border-radius: 25%;
+}
+
+aside a {
+  font-size: 28px;
+}
+
+.content {
+  margin-top: 50px;
+  padding-right: 150px !important;
+  padding-bottom: 100px !important;
+}
+
+.content p {
+  font-size: 18px;
+}
+
+.content img {
+  width: 100%;
+  border-radius: 5px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.content li {
+  font-size: 18px;
+}
+
+.code {
+  background-color: #333333;
+  color: #FCFBE3;
+  padding: 5px;
+  font-family: 'Source Code Pro', monospace;
+}
+
+.code-inline {
+  background-color: #333333;
+  color: #FCFBE3;
+  padding-left: 2px;
+  padding-right: 2px;
+  font-family: 'Source Code Pro', monospace;
+}
+
 footer {
   padding-top: 40px;
   font-size: 20px;
@@ -127,5 +182,3 @@ footer {
   background-color: lightgray;
   min-height: 100px;
 }
-
-/*<div style="text-align:center;line-height:300px;height:300px;font-size:78px;">Text Content</div>*/

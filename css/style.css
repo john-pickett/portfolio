@@ -155,6 +155,7 @@ aside a {
   margin-top: 50px;
   padding-right: 150px !important;
   padding-bottom: 100px !important;
+  min-height: 800px;
 }
 
 .content p {

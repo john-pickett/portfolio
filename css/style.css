@@ -36,13 +36,23 @@ body {
   background-position: center;
   background-attachment: fixed;
   height: 800px;
-  padding-top: 230px;
+  padding-top: 125px;
+}
+
+.my-name {
+  font-size: 82px !important;
 }
 
 .top-divider {
-    width: 400px;
+    width: 600px;
     border-top: 3px solid #f8f8f8;
     border-bottom: 1px solid rgba(0,0,0,0.2);
+    margin-top: 30px;
+}
+
+.top-connect {
+  margin-top: 25px;
+  margin-bottom: 30px;
 }
 
 .main-content {
@@ -85,6 +95,10 @@ body {
   text-align: center;
 }
 
+.portfolio i {
+  font-size: 120px;
+}
+
 .contact {
   margin-bottom: 25px;
   min-height: 300px;
@@ -104,32 +118,6 @@ form input {
 form textarea {
   width: 50%;
   height: 200px
-}
-
-#bottom-splash {
-  background-color: #ffffff;
-  color: #00688B; /* Dark Sky Blue */
-  background-image: url('../images/desk.jpg');
-  background-repeat: no-repeat;
-  background-position: center;
-  /*background-attachment: fixed;*/
-  height: 300px;
-}
-
-#bottom-splash h1{
-  font-size: 78px;
-  text-align: center;
-  line-height: 250px;
-  height: 250px;
-  text-shadow: 1px 2px #000000;
-}
-
-.bottom-splash-left {
-  /*padding-top: 25px;*/
-}
-
-.bottom-splash-right {
-  padding-top: 120px;
 }
 
 aside {
@@ -217,9 +205,9 @@ tr:nth-child(even) {
 }
 
 footer {
-  padding-top: 40px;
+  padding-top: 20px;
   font-size: 20px;
   text-align: center;
-  background-color: lightgray;
-  min-height: 100px;
+  background-color: #fff;
+  min-height:80px;
 }

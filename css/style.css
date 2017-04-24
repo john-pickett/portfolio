@@ -70,7 +70,7 @@ body {
 
 .about {
   margin-bottom: 25px;
-  min-height: 300px;
+  min-height: 200px;
 }
 
 .about h1 {
@@ -78,11 +78,11 @@ body {
 }
 
 .about img {
-  width: 80%;
+  width: 60%;
   border-radius: 25%;
   display: block;
   margin: auto;
-
+  padding-top: 20px;
 }
 
 .portfolio {
@@ -204,10 +204,18 @@ tr:nth-child(even) {
   background-color: #f2f2f2;
 }
 
+#about-nav h2 {
+  display: inline;
+}
+
+.bottom-nav {
+  padding-top: 30px;
+}
+
 footer {
-  padding-top: 20px;
+  padding-top: 3px;
   font-size: 20px;
   text-align: center;
   background-color: #fff;
-  min-height:80px;
+  min-height: 50px;
 }

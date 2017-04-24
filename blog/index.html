@@ -3,9 +3,14 @@ layout: page
 title: Blog | John Pickett
 ---
 	<h1>Recent Blog Posts</h1>
-	<ul class="posts">
+	<div class="blog-index">
+		<ul class="posts">
 
-	  {% for post in site.posts %}
-	    <li><span>{{ post.date | date_to_string }}</span> » <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></li>
-	  {% endfor %}
-	</ul>
+		  {% for post in site.posts %}
+		    <li><a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></li>
+				<p class="post-date text-right "> Published: {{ post.date | date_to_long_string }}</p>
+				<p>{{ post.content | truncatewords:50 | strip_html }} <a href="{{ post.url }}">Read This Article</p>
+		  {% endfor %}
+			
+		</ul>
+	</div>

@@ -27,6 +27,8 @@ body {
   color: #fff !important;
 }
 
+/*start of home page*/
+
 .jumbotron {
   background-color: #ffffff;
   color: #00688B; /* Dark Sky Blue */
@@ -51,8 +53,8 @@ body {
 }
 
 .top-connect {
-  margin-top: 25px;
-  margin-bottom: 30px;
+  margin-top: 30px;
+  margin-bottom: 55px;
 }
 
 .main-content {
@@ -62,11 +64,16 @@ body {
   border-left: 10px solid #00688B;
   border-right: 10px solid #00688B;
   border-bottom: 10px solid #00688B;
+  border-radius: 5px;
 }
+
+/*end of jumbotron on home page*/
 
 .main-content p {
   font-size: 18px;
 }
+
+/*about section on home page*/
 
 .about {
   margin-bottom: 25px;
@@ -85,19 +92,7 @@ body {
   padding-top: 20px;
 }
 
-.portfolio {
-  background-color: lightgray;
-  margin-bottom: 25px;
-  min-height: 300px;
-}
-
-.portfolio h1 {
-  text-align: center;
-}
-
-.portfolio i {
-  font-size: 120px;
-}
+/*end of home page, start of contact page*/
 
 .contact {
   margin-bottom: 25px;
@@ -120,8 +115,10 @@ form textarea {
   height: 200px
 }
 
+/*start of blog design*/
+
 aside {
-  margin-top: 200px;
+  margin-top: 150px;
   height: 800px;
   text-align: center;
 }
@@ -137,6 +134,20 @@ aside h2,h3 {
 
 aside a {
   font-size: 28px;
+}
+
+#page-top-ul {
+  padding-top: 15px;
+}
+
+aside span {
+  font-size: 24px;
+}
+
+.aside-divider {
+    width: 200px;
+    border-top: 3px solid #f8f8f8;
+    border-bottom: 1px solid rgba(0,0,0,0.2);
 }
 
 .content {

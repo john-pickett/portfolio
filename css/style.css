@@ -115,6 +115,14 @@ form textarea {
   height: 200px
 }
 
+/*portfolio page design*/
+
+.port-img {
+  width: 50%;
+}
+
+
+
 /*start of blog design*/
 
 .blog-index {
@@ -130,7 +138,7 @@ aside {
   text-align: center;
 }
 
-aside h2,h3 {
+aside h2, h3 {
   color: #00688B;
 }
 

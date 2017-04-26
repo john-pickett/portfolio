@@ -1,0 +1,74 @@
+---
+layout: page
+title: "Case Study: Stats Hound"
+permalink: stats-hound
+---
+<h1>Stats Hound: Easily Monitor Your Website Traffic</h1>
+<img src="/images/stats-hound.jpg" class="port-img">
+
+<h3>Overview</h3>
+
+<p>Stats Hound was built in Rails, using PostgreSQL for the database and Devise for user authentication.
+  It allows users to sign up for a free account, add the websites they want to track to their profile, and
+  get the tracking code for each website.</p>
+
+<p>Once they've added the code to their website, Stats Hound begins tracking the events that are generated
+  by their traffic, logging each event to the database. The user can then log in to Stats Hound and see the
+  events in their dashboard.</p>
+
+<h3>Build and Design</h3>
+
+<p>The first aspect of Stats Hound that I started building was the user model. I wanted my users to be
+  able to easily create an account, add as many websites as they wanted, and of course, keep their stats and
+  traffic numbers private.</p>
+
+<p>I accomplished this with help from the fantastic Devise gem, which facilitates easy account creation,
+  email verification, and password protection for each user. I also wrote the code for the navbar to show a
+  link to Sign Up or Login if the current user is not logged in, and if they are, the navbar greets them and
+  gives them easy access to their registered websites.</p>
+
+<h3>User Dashboard</h3>
+
+<img src="/images/sh-dashboard.jpg" class="port-img">
+
+<p>I wanted the user dashboard to give plenty of information without overloading the user with too many numbers
+  or stats. So I created the "at-a-glance" section at the top of the dashboard, giving the user the stats from
+  the last 30 days. A user can check this in a few seconds and quickly gauge how their website is performing.</p>
+
+<p>Below the quick-glance stats, I used Chartkick to visually represent the different events for the user's website.
+  There is a chart for page views, new users, sales, and messages sent, and the user can select to see the stats
+  from the last 30, 60, and 90 days.</p>
+
+<h3>Tracking Code and the API</h3>
+
+<p>The heart and soul of Stats Hound is the tracking code that each user puts on their website.</p>
+
+{% highlight javascript linenos %}
+var statshound = {};
+
+statshound.report = function(eventName)
+  { var event = {event: { name: eventName }};
+  var request = new XMLHttpRequest();
+  request.open("POST", "https://stats-hound-97714.herokuapp.com/api/events", true);
+  request.setRequestHeader('Content-Type', 'application/json');
+  request.send(JSON.stringify(event)); }
+
+statshound.report("pageview");
+{% endhighlight %}
+
+<p>When loaded on the user's website, this code creates a new javascript object named statshound, then
+  creates an HttpRequest hat pings the API in Stats Hound, which in turn creates a new event, under that
+  application's ID, with the name specified in the last line of code.</p>
+
+<p>Using this code allows users to specify the event that they want registered on each page. For instance, changing
+  "pageview" to "sale", and adding the code to the "Succesful Sale" page will log a sale. Users can use this in a
+  similar fashion to track new registrations on their site and new messages sent in by their visitors.</p>
+
+<h3>Conclusion</h3>
+
+<p>Stats Hound was definitely a lot of fun to make. Getting the API to work correctly was a bit tricky,
+  but it's super cool putting the tracking code on another website, and watching the logs in Stats Hound
+  as events come in and get created in real time.</p>
+
+<p>Moving forward, I'd love to let Stats Hound track unique visitors to my users' websites, as well as track
+  where each visitor is coming from - whether it's social media, Google, direct traffic, or some other source.</p>

@@ -64,28 +64,18 @@ for (var i = 0; i < students.length; i ++){
   Zeke
   ```
 
-<p>Let's break down what happened with the for loop. The first part of the loop <span class="code-inline">
-  for (var i = 0;)</span> begins the loop, creates a variable named <span class="code-inline">i</span> and
-  sets it equal to <span class="code-inline">0</span>. It's common to use <span class="code-inline">i</span> as your variable and set it equal to <span class="code-inline">0</span>,
-  but it's important to know that you can choose any name for your variable and set it equal to any number (as we'll soon see!).</p>
+<p>Let's break down what happened with the for loop. The first part of the loop for (var i = 0;) begins the loop, creates a variable named i and
+  sets it equal to 0. It's common to use i as your variable and set it equal to 0, but it's important to know that you can choose any name for your variable and set it equal to any number (as we'll soon see!).</p>
 
-<p>All that <span class="code-inline">i</span> is doing here is acting as a counter. The second part of the loop
-  <span class="code-inline">i < students.length; i ++</span> tells the for loop how long to run. <span class="code-inline">i ++</span>
-  means "add 1 to <span class="code-inline">i</span> each time you loop", and <span class="code-inline">i < students.length</span>
-  means run as long as <span class="code-inline">i</span> is less than the length of the students array.</p>
+<p>All that i is doing here is acting as a counter. The second part of the loop i < students.length; i ++ tells the for loop how long to run. i ++
+  means "add 1 to i each time you loop", and i < students.length means run as long as i is less than the length of the students array.</p>
 
-<p>The first time the for loop runs, the loop creates the variable <span class="code-inline">i</span>, sets it
-  equal to <span class="code-inline">0</span>, checks to make sure it satisfies the second part of the statement
-  <span class="code-inline"> i < students.length</span>, adds 1 to <span class="code-inline">i</span>, and then
-  finally executes the code in your loop. (In this example, that's the <span class="code-inline">console.log</span> statement.)
-  It continues that pattern until <span class="code-inline">i</span> does not satisfy the criteria in the second part
-  the statement, at which point the loop stops.</p>
+<p>The first time the for loop runs, the loop creates the variable i, sets it equal to 0, checks to make sure it satisfies the second part of the statement i < students.length, adds 1 to i, and then finally executes the code in your loop. (In this example, that's the console.log statement.) It continues that pattern until i does not satisfy the criteria in the second part the statement, at which point the loop stops.</p>
 
 
 <h2>Now, About That Seating Chart</h2>
 
-<p>So far all we've done for Miss Alice is print out a list of her students. Which, presumably, she
-already had. So let's get to work on the random seating chart.</p>
+<p>So far all we've done for Miss Alice is print out a list of her students. Which, presumably, she already had. So let's get to work on the random seating chart.</p>
 
 <p>Here's some code, that based on what we've learned so far, should make a random seating chart:</p>
 
@@ -104,15 +94,15 @@ for (var i = 0; i < students.length; i++) {
 console.log(seatingChart);
   ```
 
-<p>What I've done in this code is create a new, empty array called <span class="code-inline">seatingChart</span>
-  that will eventually hold our random list. Then, in the for loop, I have a variable <span class="code-inline">random</span>
-  which is going to be assigned a random number between 0 and the current length of the students array. (Because <span class="code-inline">random</span>
+<p>What I've done in this code is create a new, empty array called seatingChart
+  that will eventually hold our random list. Then, in the for loop, I have a variable random
+  which is going to be assigned a random number between 0 and the current length of the students array. (Because random
   is inside the for loop, it will be assigned a new random value each time the loop runs.)</p>
 
-<p>Next I'm going to find the student at the <span class="code-inline">random</span> position in the students array,
-remove it from <span class="code-inline">students</span> and add it to <span class="code-inline">seatingChart</span>.
-(If you aren't familiar with <span class="code-inline">Math.floor()</span>, <span class="code-inline">Math.random()</span>,
-<span class="code-inline">.push()</span>, or <span class="code-inline">.splice()</span>, that's ok. It's enough for now
+<p>Next I'm going to find the student at the random position in the students array,
+remove it from students and add it to seatingChart.
+(If you aren't familiar with Math.floor(), Math.random(),
+.push(), or .splice(), that's ok. It's enough for now
 to know what the for loop is supposed to do.)</p>
 
 <p>When we run this code, we should get a list of all 26 students in a random order. But what we actually get is something like this: </p>
@@ -135,10 +125,10 @@ to know what the for loop is supposed to do.)</p>
 
 <p>That's only 13 students. What happened?</p>
 
-<p>The problem lies in how we defined our for loop. We set it to run as long as <span class="code-inline">i < students.length</span>,
-  and at the same time, we're removing the student's name from <span class="code-inline">students</span> (so that they don't get
-  assigned to the <span class="code-inline">seatingChart</span> twice). So <span class="code-inline">i</span> is counting up
-  at the same time that <span class="code-inline">students.length</span> is getting smaller. Eventually,
+<p>The problem lies in how we defined our for loop. We set it to run as long as i < students.length,
+  and at the same time, we're removing the student's name from students (so that they don't get
+  assigned to the seatingChart twice). So i is counting up
+  at the same time that students.length is getting smaller. Eventually,
 they meet in the middle, at 13, and the for loop stops.</p>
 
 <p>So, how can we solve this problem and get Miss Alice her seating chart? There are a couple of solutions.</p>
@@ -152,7 +142,7 @@ for (var i = 0; i < 26; i++) {
 }
 ```
 
-<p>Using <span class="code-inline">i < 26</span> ensures that our loop will run the correct number of times and assign every student to the <span class="code-inline">seatingChart</span>. However, that's not a very elegant solution. What if we didn't know the exact number of students in the class? A better option would be this:</p>
+<p>Using i < 26 ensures that our loop will run the correct number of times and assign every student to the seatingChart. However, that's not a very elegant solution. What if we didn't know the exact number of students in the class? A better option would be this:</p>
 
 ```javascript
 for (var i = students.length; i > 0; i--) {
@@ -161,8 +151,8 @@ for (var i = students.length; i > 0; i--) {
 }
 ```
 
-<p>Here we are assigning <span class="code-inline">i</span> the value of <span class="code-inline">students.length</span>,
-  then subtracting 1 each loop, and telling it to run as long as <span class="code-inline">i > 0</span>. Using this
+<p>Here we are assigning i the value of students.length,
+  then subtracting 1 each loop, and telling it to run as long as i > 0. Using this
   solution ensures that the loop will select every student from the original array no matter how many students there are.</p>
 
 <h2>Using A While Loop</h2>
@@ -182,12 +172,12 @@ while (i > 0) {<br>
 ```
 
 <p>The syntax of a while loop is a little bit different, but you can still see what's happening.
-  We're setting <span class="code-inline">i = students.length</span> (outside of the loop this time), and
+  We're setting i = students.length (outside of the loop this time), and
   then removing a student randomly from the array. Be sure to put in the line of code that increments
-  or decrements <span class="code-inline">i</span>, or else your loop will run forever! (and crash your browser.)</p>
+  or decrements i, or else your loop will run forever! (and crash your browser.)</p>
 
-<p>A while loop runs as long as the statement in the parentheses is true. We set <span class="code-inline">i = students.length</span>
-  and then decrement it by one each loop, so the loop will run as long as <span class="code-inline">i > 0</span>. Once <span class="code-inline">i</span>
+<p>A while loop runs as long as the statement in the parentheses is true. We set i = students.length
+  and then decrement it by one each loop, so the loop will run as long as i > 0. Once i
   hits 0, the loop stops.</p>
 
 <p>In case you're curious, if the statement in the while loop is false, the loop will never run.</p>
@@ -215,5 +205,5 @@ do {
 while (i < 10);
 ```
 
-<p>This will log <span class="code-inline">i</span> to the console 10 times, but if we changed the code
-  to say <span class="code-inline">while (i > 10);</span> thus making it a false statement, the code would still run one time.</p>
+<p>This will log i to the console 10 times, but if we changed the code
+  to say while (i > 10); thus making it a false statement, the code would still run one time.</p>

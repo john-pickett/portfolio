@@ -29,16 +29,29 @@ body {
 
 /*start of home page*/
 
-.jumbotron {
-  background-color: #ffffff;
-  color: #00688B; /* Dark Sky Blue */
-  padding: 100px 25px;
+#top {
   background-image: url('../images/desk.jpg');
   background-repeat: no-repeat;
   background-position: center;
   background-attachment: fixed;
-  height: 800px;
-  padding-top: 125px;
+}
+
+.jumbotron {
+  height: 750px;
+}
+
+.gradient {
+  background: linear-gradient(to right, rgba(0, 104, 139, 1.0), rgba(0, 104, 139, 0.9) 50%, rgba(0, 0, 0, 0.1));
+  height: 710px;
+}
+
+.info {
+  /*background-color: #00688B;*/
+  height: 780px;
+  color: #ffffff;
+  margin: -100px 0 0 -25px;
+  padding-top: 200px;
+  padding-left: 50px;
 }
 
 .my-name {

@@ -41,7 +41,7 @@ body {
 }
 
 .gradient {
-  background: linear-gradient(to right, rgba(0, 104, 139, 1.0), rgba(0, 104, 139, 0.9) 50%, rgba(0, 0, 0, 0.1));
+  background: linear-gradient(to right, rgba(0, 104, 139, 1.0), rgba(0, 104, 139, 1.0) 50%, rgba(0, 0, 0, 0.1));
   height: 710px;
 }
 
@@ -127,15 +127,38 @@ form textarea {
   height: 200px
 }
 
-/*portfolio page design*/
+/*projects page design*/
 
 .port-img {
   width: 50%;
 }
 
+.project-buttons i {
+  color: #ffffff;
+}
+
+.project-buttons a {
+  background-color: #00688B;
+  color: white;
+  font-size: 24px;
+}
+
+.projects-line {
+  width: 600px;
+  border-top: 1px solid black;
+}
 
 
-/*start of blog design*/
+/*start of blog and sidebar design*/
+
+.sidebar-buttons i {
+  color: #ffffff;
+}
+
+.sidebar-buttons a {
+  background-color: #00688B;
+  color: white;
+}
 
 .blog-index {
   padding-top: 25px;
@@ -148,6 +171,7 @@ aside {
   margin-top: 125px;
   height: 800px;
   text-align: center;
+  padding-left: 50px;
 }
 
 aside h2, h3 {
@@ -173,12 +197,11 @@ aside span {
 
 .aside-divider {
     width: 200px;
-    border-top: 3px solid #f8f8f8;
-    border-bottom: 1px solid rgba(0,0,0,0.2);
+    border-top: 1px solid #000000;
 }
 
 .content {
-  margin-top: 50px;
+  margin-top: 75px;
   padding-right: 150px !important;
   padding-bottom: 100px !important;
   min-height: 800px;
@@ -197,21 +220,6 @@ aside span {
 
 .content li {
   font-size: 18px;
-}
-
-.code {
-  background-color: #333333;
-  color: #FCFBE3;
-  padding: 5px;
-  font-family: 'Source Code Pro', monospace;
-}
-
-.code-inline {
-  background-color: #333333;
-  color: #FCFBE3;
-  padding-left: 2px;
-  padding-right: 2px;
-  font-family: 'Source Code Pro', monospace;
 }
 
 table {

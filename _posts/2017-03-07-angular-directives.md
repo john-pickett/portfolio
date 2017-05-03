@@ -10,13 +10,14 @@ date: 2017-03-07
 
 <p>An easy example of a directive is when you bootstrap, or start, your Angular application. Your index.html file might start out like this:</p>
 
-<p class="code">
-<!DOCTYPE html><br>
-< html ng-app="myApp"></p>
+```
+<!DOCTYPE html>
+<html ng-app="myApp">
+```
 
-<p><span class="code-inline">ng-app</span> is a directive which tells Angular to wake up and pay attention because you're using it to build an application.</p>
+<p>ng-app is a directive which tells Angular to wake up and pay attention because you're using it to build an application.</p>
 
-<p>In addition to <span class="code-inline">ng-app</span>, there are several other directives that you'll use on a regular basis. Some examples:</p>
+<p>In addition to ng-app, there are several other directives that you'll use on a regular basis. Some examples:</p>
 
 <table>
   <tr><th>Directive</th><th>Description</th></tr>
@@ -29,13 +30,13 @@ date: 2017-03-07
 
 <p>In addition to using the built-in directives available in Angular, you can also create your own custom directives. Here's a quick example:</p>
 
-<p class="code">
+```
 var app = angular.module("myCoolApp", []);
-app.directive("myAwesomeDirective", function() {<br>
-  return {<br>
-    template: < h1>This headline was brought to you by a directive!</h1><br>
+app.directive("myAwesomeDirective", function() {
+  return {
+    template: < h1>This headline was brought to you by a directive!</h1>
   };<br>
 });
-</p>
+```
 
-<p>Then, in your HTML, you can call this directive by creating an element with the same name: <span class="code-inline">< my-awesome-directive>< /my-awesome-directive></span>.</p>
+<p>Then, in your HTML, you can call this directive by creating an element with the same name: < my-awesome-directive>< /my-awesome-directive>.</p>

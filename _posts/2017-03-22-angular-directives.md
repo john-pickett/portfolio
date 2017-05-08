@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "An Introduction To Angular Directives"
-date: 2017-03-07
+date: 2017-03-22
 ---
 
 <p>One of the most confusing parts of learning Angular is the seemingly-huge number of new terms and concepts that you have to learn and use. Chances are good that you've never dealt with controllers, directives, or factories before, and suddenly they're essential to your app working correctly. In the next few articles on this blog, we're going to be discussing some basic concepts in Angular, and this article is on directives.</p>
